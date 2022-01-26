@@ -4,6 +4,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:syriancards/cart.dart';
 import 'package:syriancards/categories.dart';
+import 'package:syriancards/screens/navigation_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Animated Text Kit',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       home: MyHomePage(),
     );
   }
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute<dynamic>(
-              builder: (BuildContext context) => Categories()));
+              builder: (BuildContext context) => const NavigationHomeScreen()));
     });
 
     return Scaffold(
